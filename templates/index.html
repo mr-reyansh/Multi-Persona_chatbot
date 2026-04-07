@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - Mode Selection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="landing-body">
+    <div class="landing-container">
+        <header>
+            <h1 class="welcome-title">Welcome to Multi-Persona AI Assistant</h1>
+            <p class="welcome-subtitle">Select your desired assistant mode</p>
+        </header>
+
+        <main class="cards-container">
+            <div class="persona-card" onclick="selectPersona('teacher')">
+                <div class="icon">👨‍🏫</div>
+                <h2>Teacher</h2>
+                <p>Academic tutor & step-by-step guidance.</p>
+            </div>
+            
+            <div class="persona-card" onclick="selectPersona('doctor')">
+                <div class="icon">🩺</div>
+                <h2>Doctor</h2>
+                <p>Medical consultant & health advisor.</p>
+            </div>
+            
+            <div class="persona-card" onclick="selectPersona('friend')">
+                <div class="icon">🤝</div>
+                <h2>Friend</h2>
+                <p>Casual support & emotional listener.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>Students: Reyansh kumar, Shrish Ahankari, Anisha Sharma | Guide: Poonkodi</p>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+    <script>
+        function selectPersona(persona) {
+            localStorage.setItem('selectedPersona', persona);
+            window.location.href = '/chat';
+        }
+    </script>
+</body>
+</html>
